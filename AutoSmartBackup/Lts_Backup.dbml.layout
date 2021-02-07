@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="Lts_Backup">
+  <DataContextMoniker Name="/Lts_BackupDataContext" />
+  <nestedChildShapes>
+    <classShape Id="ff070dae-3ae8-4bc1-9cbf-62c7f767ef66" absoluteBounds="0.5, 0.625, 2, 1.3862939453125">
+      <DataClassMoniker Name="/Lts_BackupDataContext/Bkp_Tb_DataBase" />
+      <nestedChildShapes>
+        <elementListCompartment Id="341840a2-95c8-4e5b-b3cd-7161e4fe8b2c" absoluteBounds="0.51500000000000012, 1.085, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="f584f30b-5443-46f1-9697-444d8996321e" absoluteBounds="3.125, 0.625, 2.375, 1.3862939453125">
+      <DataClassMoniker Name="/Lts_BackupDataContext/Bkp_Tb_ServerDataBase" />
+      <nestedChildShapes>
+        <elementListCompartment Id="865c704e-c753-4ab7-b316-9d78dddc16fa" absoluteBounds="3.14, 1.085, 2.3449999999999998, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(2.5 : 1.31814697265625); (3.125 : 1.31814697265625)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/Lts_BackupDataContext/Bkp_Tb_DataBase/Bkp_Tb_DataBase_Bkp_Tb_ServerDataBase" />
+      <nodes>
+        <classShapeMoniker Id="ff070dae-3ae8-4bc1-9cbf-62c7f767ef66" />
+        <classShapeMoniker Id="f584f30b-5443-46f1-9697-444d8996321e" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="3f644454-c9ee-47f8-988a-5851c8c3ab67" absoluteBounds="3.5, 2.375, 2, 2.7324039713541666">
+      <DataClassMoniker Name="/Lts_BackupDataContext/Bkp_Tb_Server" />
+      <nestedChildShapes>
+        <elementListCompartment Id="c848bbe9-0699-4fdc-861f-5be1bfb42a79" absoluteBounds="3.5149999999999997, 2.835, 1.9700000000000002, 2.1724039713541665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(4.5 : 2.375); (4.5 : 2.0112939453125)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/Lts_BackupDataContext/Bkp_Tb_Server/Bkp_Tb_Server_Bkp_Tb_ServerDataBase" />
+      <nodes>
+        <classShapeMoniker Id="3f644454-c9ee-47f8-988a-5851c8c3ab67" />
+        <classShapeMoniker Id="f584f30b-5443-46f1-9697-444d8996321e" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

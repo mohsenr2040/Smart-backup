@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="AutoBackup" Class="Lts_BackupDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=REZAEI;Initial Catalog=auto;Integrated Security=True" SettingsObjectName="AutoSmartBackup.Properties.Settings" SettingsPropertyName="AutoBackupConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.Bkp_Tb_DataBase" Member="Bkp_Tb_DataBases">
+    <Type Name="Bkp_Tb_DataBase">
+      <Column Name="xDataBaseId_pk" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="xDataBaseName" Type="System.String" DbType="NVarChar(25) NOT NULL" CanBeNull="false" />
+      <Column Name="[xDataBaseIsDeleted?]" Member="xDataBaseIsDeleted_" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Association Name="Bkp_Tb_DataBase_Bkp_Tb_ServerDataBase" Member="Bkp_Tb_ServerDataBases" ThisKey="xDataBaseId_pk" OtherKey="xDataBaseId_fk" Type="Bkp_Tb_ServerDataBase" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Bkp_Tb_ServerDataBase" Member="Bkp_Tb_ServerDataBases">
+    <Type Name="Bkp_Tb_ServerDataBase">
+      <Column Name="xServerId_fk" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="xDataBaseId_fk" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="[xServerDataBaseIsDeleted?]" Member="xServerDataBaseIsDeleted_" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Association Name="Bkp_Tb_DataBase_Bkp_Tb_ServerDataBase" Member="Bkp_Tb_DataBase" ThisKey="xDataBaseId_fk" OtherKey="xDataBaseId_pk" Type="Bkp_Tb_DataBase" IsForeignKey="true" />
+      <Association Name="Bkp_Tb_Server_Bkp_Tb_ServerDataBase" Member="Bkp_Tb_Server" ThisKey="xServerId_fk" OtherKey="xServerId_pk" Type="Bkp_Tb_Server" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Bkp_Tb_Server" Member="Bkp_Tb_Servers">
+    <Type Name="Bkp_Tb_Server">
+      <Column Name="xServerId_pk" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="xServerIP" Type="System.String" DbType="NVarChar(15) NOT NULL" CanBeNull="false" />
+      <Column Name="xServerDomainName" Type="System.String" DbType="NVarChar(35) NOT NULL" CanBeNull="false" />
+      <Column Name="xServerAdminName" Type="System.String" DbType="NVarChar(35) NOT NULL" CanBeNull="false" />
+      <Column Name="xServerAdminPassword" Type="System.String" DbType="NVarChar(25) NOT NULL" CanBeNull="false" />
+      <Column Name="xServerSQLAdminName" Type="System.String" DbType="NVarChar(35) NOT NULL" CanBeNull="false" />
+      <Column Name="xServerSQLAdminPassword" Type="System.String" DbType="NVarChar(35) NOT NULL" CanBeNull="false" />
+      <Column Name="xServerSQLInstance" Type="System.String" DbType="NVarChar(25)" CanBeNull="true" />
+      <Column Name="xServerDriveToBackup" Type="System.String" DbType="NChar(3) NOT NULL" CanBeNull="false" />
+      <Column Name="[xServerIsDeleted?]" Member="xServerIsDeleted_" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Association Name="Bkp_Tb_Server_Bkp_Tb_ServerDataBase" Member="Bkp_Tb_ServerDataBases" ThisKey="xServerId_pk" OtherKey="xServerId_fk" Type="Bkp_Tb_ServerDataBase" />
+    </Type>
+  </Table>
+</Database>
