@@ -1,3 +1,3 @@
 # Smart-backup
 is develoed in 2013
-Connect to all servers in scheduling , backup all specific databases .Then create zip file and copy them to the distination. 
+Connect to all servers in scheduling , backs up all specific databases .Then creates zip file and copies them to the distination. 
