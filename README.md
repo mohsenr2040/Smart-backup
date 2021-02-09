@@ -7,7 +7,7 @@
 * [Setup](#setup)
 
 ## General info
-this windows app backups all enterprise network servers.Connect to all servers in scheduling , backs up all specific databases .Then creates zip file and copies them to the destination. 
+This windows app backups all enterprise network servers.Connect to all servers in scheduling , backs up all specific databases .Then creates zip file and copies them to the destination.The application has developed in 2012.
 	
 ## Technologies
 Project is created with:
