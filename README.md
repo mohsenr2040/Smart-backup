@@ -13,6 +13,7 @@ This windows app backups all enterprise network servers.Connect to all servers i
 Project is created with:
 * C#.NET
 * SQL Server
+* xp_CMDShell in SQL
 	
 ## Setup
 To run this project, clone the repository in your local repo:
