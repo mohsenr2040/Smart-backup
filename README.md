@@ -15,7 +15,9 @@ Project is created with:
 * SQL Server
 	
 ## Setup
-To run this project, install it locally using npm:
+To run this project, clone the repository in your local repo:
 
 ```
-$ cd ../lorem
+$ run sql script to create database
+$ input servers ip in database
+$ run .exe
